@@ -7,15 +7,15 @@ Summary:	Converts Outlook .mbx and .dbx files into standard UUCP mailbox files
 Summary(pl):	Konwersja plików .mbx i .dbx z Outlooka na standardowe skrzynki UUCP
 Name:		mbx2mbox
 Version:	0.34
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	http://dl.sourceforge.net/mbx2mbox/%{name}-%{version}.tar.gz
 # Source0-md5:	a72210d985ef56ef1ad3b37bb428bf7b
 URL:		http://mbx2mbox.sourceforge.net/
-BuildRequires:	perl >= 5.6.0
+BuildRequires:	perl-devel >= 1:5.6.0
 BuildRequires:	perl-Date-Manip
-BuildRequires:	rpm-perlprov
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,6 +40,7 @@ rozszerzenia .mbx.
 %build
 %{__perl} Makefile.PL
 %{__make}
+
 %{!?_without_tests:%{__make} test}
 
 %install
