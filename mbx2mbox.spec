@@ -1,11 +1,16 @@
+#
+# Conditional build:
+# _without_tests	- do not perform "make test"
+#
 %include        /usr/lib/rpm/macros.perl
-Summary:	Converts Outlook .mbx and .dbx files into standard UUCP mailbox files.
+Summary:	Converts Outlook .mbx and .dbx files into standard UUCP mailbox files
+Summary(pl):	Konwersja plików .mbx i .dbx z Outlooka na standardowe skrzynki UUCP
 Name:		mbx2mbox
 Version:	0.34
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Source0:	http://download.sourceforge.net/mbx2mbox/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/mbx2mbox/%{name}-%{version}.tar.gz
 URL:		http://mbx2mbox.sourceforge.net/
 BuildRequires:	perl >= 5.6.0
 BuildRequires:	perl-Date-Manip
@@ -16,9 +21,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 mbx2mbox attempts to convert Microsoft's proprietary .mbx and .dbx
 formats to the standard Unix-style UUCP mail format used by programs
-like UCB Mail, Pine, and Netscape Messenger The .mbx and .dbx files
+like UCB Mail, Pine, and Netscape Messenger. The .mbx and .dbx files
 provided as arguments to mbx2mbox are processed and output to files
 having the same name, except without the .mbx extension.
+
+%description -l pl
+mbx2mbox próbuje konwertowaæ pliki .mbx i .dbx we w³asno¶ciowych
+formatach Microsoftu do standardowego, uniksowego formatu skrzynek
+UUCP, u¿ywanego przez programy takie jak UCB Mail, Pine czy Netscape
+Messenger. Pliki .mbx i .dbx przekazane jako argumenty mbx2mbox s±
+przetwarzane z zapisywane do plików o tej samej nazwie, ale bez
+rozszerzenia .mbx.
 
 %prep
 %setup -q
