@@ -11,6 +11,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	http://dl.sourceforge.net/mbx2mbox/%{name}-%{version}.tar.gz
+# Source0-md5:	a72210d985ef56ef1ad3b37bb428bf7b
 URL:		http://mbx2mbox.sourceforge.net/
 BuildRequires:	perl >= 5.6.0
 BuildRequires:	perl-Date-Manip
