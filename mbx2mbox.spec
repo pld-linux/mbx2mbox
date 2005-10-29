@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests	- do not perform "make test"
+%bcond_without tests		# do not perform "make test"
 #
 %include        /usr/lib/rpm/macros.perl
 Summary:	Converts Outlook .mbx and .dbx files into standard UUCP mailbox files
@@ -41,11 +41,13 @@ rozszerzenia .mbx.
 %{__perl} Makefile.PL
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
