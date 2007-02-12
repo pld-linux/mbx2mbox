@@ -4,7 +4,7 @@
 #
 %include        /usr/lib/rpm/macros.perl
 Summary:	Converts Outlook .mbx and .dbx files into standard UUCP mailbox files
-Summary(pl):	Konwersja plików .mbx i .dbx z Outlooka na standardowe skrzynki UUCP
+Summary(pl.UTF-8):   Konwersja plikÃ³w .mbx i .dbx z Outlooka na standardowe skrzynki UUCP
 Name:		mbx2mbox
 Version:	0.34
 Release:	2
@@ -26,12 +26,12 @@ like UCB Mail, Pine, and Netscape Messenger. The .mbx and .dbx files
 provided as arguments to mbx2mbox are processed and output to files
 having the same name, except without the .mbx extension.
 
-%description -l pl
-mbx2mbox próbuje konwertowaæ pliki .mbx i .dbx we w³asno¶ciowych
+%description -l pl.UTF-8
+mbx2mbox prÃ³buje konwertowaÄ‡ pliki .mbx i .dbx we wÅ‚asnoÅ›ciowych
 formatach Microsoftu do standardowego, uniksowego formatu skrzynek
-UUCP, u¿ywanego przez programy takie jak UCB Mail, Pine czy Netscape
-Messenger. Pliki .mbx i .dbx przekazane jako argumenty mbx2mbox s±
-przetwarzane z zapisywane do plików o tej samej nazwie, ale bez
+UUCP, uÅ¼ywanego przez programy takie jak UCB Mail, Pine czy Netscape
+Messenger. Pliki .mbx i .dbx przekazane jako argumenty mbx2mbox sÄ…
+przetwarzane z zapisywane do plikÃ³w o tej samej nazwie, ale bez
 rozszerzenia .mbx.
 
 %prep
