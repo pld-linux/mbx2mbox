@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without tests		# do not perform "make test"
 #
-%include        /usr/lib/rpm/macros.perl
 Summary:	Converts Outlook .mbx and .dbx files into standard UUCP mailbox files
 Summary(pl.UTF-8):	Konwersja plików .mbx i .dbx z Outlooka na standardowe skrzynki UUCP
 Name:		mbx2mbox
